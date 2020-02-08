@@ -1,0 +1,131 @@
+CREATE DATABASE iot;
+
+SHOW DATABASES;
+
+USE iot;
+
+CREATE TABLE table_name(
+	..
+	..
+	..
+);
+
+CREATE TABLE myIotDevice(
+	id INT,
+	temp DOUBLE,
+	humdf DOUBLE
+);
+
+https://tinyurl.com/yx66gom3
+
+INSERT INTO myIotDevice VALUES (
+    0,
+    4.5,
+    98.23
+);
+
+SELECT * FROM myIotDevice;
+
+INSERT INTO myIotDevice VALUES 
+(1, 2.3, 81.24),
+(2, 6.4, 98.45),
+(3, 3.1, 83.65);
+
+Constraints in MySQL:-
+UNIQUE
+
+create table class(
+	id int, 
+	name varchar(32)
+);
+
+INSERT INTO class VALUES(
+	0,
+	'Ramachandar'
+);
+
+INSERT INTO class VALUES(
+	1,
+	'Ramachandar'
+);
+
+DROP TABLE class;
+
+CREATE TABLE class(
+    id int,
+    name VARCHAR(32) UNIQUE
+);
+
+INSERT INTO class VALUES(
+	0,
+	"Ramachandar"
+);
+
+INSERT INTO class VALUES(
+	1, 
+	"Ramachandar"
+);
+
+NOT NULL
+
+INSERT INTO class(id) VALUES(3);
+
+drop table class;
+
+CREATE TABLE class(
+    id int,
+    name VARCHAR(32) UNIQUE NOT NULL
+);
+
+DATE -
+CREATE TABLE attendance(
+	d DATE,
+	name VARCHAR(32)
+);
+
+INSERT INTO attendance VALUES(
+	NOW(),
+	'Abhilash'
+);
+
+INSERT INTO attendance VALUES(
+	NOW(),
+	'Akhil'
+);
+
+SELECT * FROM attendance;
+
+
+id (not null, unique)
+d
+temp
+humdf
+
+CREATE TABLE myIotDeviceTwo(
+	id INT UNIQUE NOT NULL,
+	d DATE,
+	temp DOUBLE,
+	humdf DOUBLE
+);
+
+INSERT INTO myIotDeviceTwo VALUES
+(0, NOW(), 94.2, 18.3),
+(1, NOW(), 14.3, 58.3);
+
+SELECT * FROM myIotDeviceTwo;
+
+AUTO_INCREMENT
+DROP TABLE myIotDeviceTwo;
+
+CREATE TABLE myIotDeviceTwo(
+	id INT UNIQUE NOT NULL AUTO_INCREMENT,
+	d DATE,
+	temp DOUBLE,
+	humdf DOUBLE
+);
+
+INSERT INTO myIotDeviceTwo(d, temp, humdf) VALUES (
+	NOW(), 28.3, 01.3
+);
+
+(
